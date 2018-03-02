@@ -2,6 +2,39 @@
 
 console.log('App.js is running!');
 
+var app = {
+  title: 'this ia a title',
+  subtitle: 'this is a subtitle'
+};
+var appTemplate = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    app.title
+  ),
+  React.createElement(
+    'p',
+    null,
+    app.subtitle
+  ),
+  React.createElement(
+    'ol',
+    null,
+    React.createElement(
+      'li',
+      null,
+      'item one'
+    ),
+    React.createElement(
+      'li',
+      null,
+      'item two'
+    )
+  )
+);
+
 // JSX -Javascript XML
 var template = React.createElement(
   'div',
@@ -32,26 +65,35 @@ var template = React.createElement(
   )
 );
 
+var user = {
+  name: 'Jahnava',
+  age: 28,
+  location: 'Florida'
+};
+
 var templateTwo = React.createElement(
   'div',
   null,
   React.createElement(
     'h1',
     null,
-    'Jahnava'
+    ' ',
+    user.name
   ),
   React.createElement(
     'p',
     null,
-    'Age:28'
+    'Age: ',
+    user.age
   ),
   React.createElement(
     'p',
     null,
-    'Location: Florida'
+    'Location: ',
+    user.location
   )
 );
 
 var appRoot = document.getElementById('app');
-
-ReactDOM.render(templateTwo, appRoot);
+//renders the template information (make sure to use child of main var)
+ReactDOM.render(template, appRoot);
