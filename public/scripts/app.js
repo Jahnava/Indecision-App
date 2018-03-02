@@ -4,9 +4,18 @@ console.log('App.js is running!');
 
 // JSX -Javascript XML
 var template = React.createElement(
-  'h1',
+  'div',
   null,
-  'Indecisioning App'
+  React.createElement(
+    'h1',
+    null,
+    'Indecision App'
+  ),
+  React.createElement(
+    'p',
+    null,
+    'this is some info'
+  )
 );
 var appRoot = document.getElementById('app');
 
