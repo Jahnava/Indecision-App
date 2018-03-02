@@ -1,13 +1,7 @@
-'use strict';
-
 console.log('App.js is running!');
 
 // JSX -Javascript XML
-var template = React.createElement(
-  'h1',
-  null,
-  'Indecisioning App'
-);
+var template =<h1>Indecisioning App</h1>;
 var appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
