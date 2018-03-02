@@ -1,7 +1,7 @@
 console.log('App.js is running!');
 
 var app = {
-  title: 'this ia a title',
+  title: 'this is a title',
   subtitle: 'this is a subtitle'
 };
 var appTemplate = (
@@ -33,16 +33,22 @@ var user = {
   age:28,
   location: 'Florida'
 };
-
+function getLocation(location) {
+  if (location) {
+    return <p>location: {location}</p>
+  } else {
+    return 'Unknown';
+  }
+}
 var templateTwo = (
   <div>
     <h1> {user.name}</h1>
     <p>Age: {user.age}</p>
-    <p>Location: {user.location}</p>
+    {getLocation(user.location)}
   </div>
 );
 
 
 var appRoot = document.getElementById('app');
 //renders the template information (make sure to use child of main var)
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
