@@ -9,11 +9,21 @@ console.log(add(55, 1, 1001));
 
 const user = {
   name: 'Jahnava',
-  cities: ['Philadelphia', 'New York', 'Dublin'],
-  printPlacesLived: function () {
-    this.cities.forEach((city) => {
-      console.log(this.name + ' has lived in ' + city);
-    });
+  cities: ['Gainesville', 'Ninoli', 'Roanoke'],
+  printPlacesLived() {
+    return this.cities.map((city) => this.name + ' flew like super woman to ' + city);
   }
-};
-user.printPlacesLived();
+    };
+    console.log(user.printPlacesLived());
+
+    //challenge
+
+    const multiplier = {
+      numbers: [10, 20, 30],
+      multiplyBy: 3,
+      multiply(){
+        return this.numbers.map((number) => number * this.multiplyBy);
+      }
+    };
+
+    console.log(multiplier.multiply());
